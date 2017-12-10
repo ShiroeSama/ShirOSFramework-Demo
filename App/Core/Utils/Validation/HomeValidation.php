@@ -43,7 +43,9 @@
 		protected function buildForm(ValidationBuilder &$builder)
 		{
 			$builder->add(StringType::type(), $this->ConfigModule->get('Fields.Name.Username'))
-					->add(EmailType::type(), $this->ConfigModule->get('Fields.Name.Email'), 'Format Incorrect');
+					->add(EmailType::type(), $this->ConfigModule->get('Fields.Name.Email'), array(
+						self::PARAM_MESSAGE => 'Format Incorrect'
+					));
 		}
 	}
 ?>
