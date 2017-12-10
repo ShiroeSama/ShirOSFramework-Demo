@@ -47,7 +47,7 @@
                             <?= $form->input($ConfigModule->get("Fields.Name.Username"), ['placeholder' => "Username"]); ?>
                         <?php endif; ?>
     
-                        <!-- Email -->
+                        <!-- EMAIL -->
             
                         <?php if(isset($errors[$ConfigModule->get("Fields.Name.Email")])) : ?>
                             <?= $form->input($ConfigModule->get("Fields.Name.Email"), ['placeholder' => "Email Address"], true); ?>
@@ -57,6 +57,10 @@
                         <?php else: ?>
                             <?= $form->input($ConfigModule->get("Fields.Name.Email"), ['placeholder' => "Email Address"]); ?>
                         <?php endif; ?>
+
+                        <!-- TEST -->
+	
+	                    <?= $form->input($ConfigModule->get("Fields.Name.Test"), ['placeholder' => "Test"]); ?>
             
                         <?= $form->submit("Test", ['surround' => 'divInline-center marginTop-20']); ?>
                     </form>

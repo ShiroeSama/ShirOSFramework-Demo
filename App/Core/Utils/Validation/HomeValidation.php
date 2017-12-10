@@ -45,6 +45,9 @@
 			$builder->add(StringType::type(), $this->ConfigModule->get('Fields.Name.Username'))
 					->add(EmailType::type(), $this->ConfigModule->get('Fields.Name.Email'), array(
 						self::PARAM_MESSAGE => 'Format Incorrect'
+					))
+					->add(StringType::type(), $this->ConfigModule->get('Fields.Name.Test'), array(
+						self::PARAM_REQUIRED => false
 					));
 		}
 	}

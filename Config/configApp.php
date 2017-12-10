@@ -60,7 +60,8 @@
 			    'Id' => 'Id',
 			    'Username' => 'Username',
 			    'Email' => 'Email',
-			    'Date' => 'Date'
+			    'Date' => 'Date',
+			    'Test' => 'Test'
 		    ],
 	   ],
 
