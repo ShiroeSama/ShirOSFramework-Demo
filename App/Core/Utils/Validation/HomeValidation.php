@@ -40,7 +40,7 @@
 			parent::__construct();
 		}
 		
-		protected function buildForm(ValidationBuilder &$builder)
+		protected function buildValidation(ValidationBuilder $builder)
 		{
 			$builder->add(StringType::type(), $this->ConfigModule->get('Fields.Name.Username'))
 					->add(EmailType::type(), $this->ConfigModule->get('Fields.Name.Email'), array(

@@ -76,7 +76,7 @@
 			$this->rawValues = array();
 			
 			$this->valid = true;
-			$this->buildForm($this->BuilderModule);
+			$this->buildValidation($this->BuilderModule);
 		}
 
         /**
@@ -85,7 +85,7 @@
          *
          * @param ValidationBuilder $builder
          */
-        protected function buildForm(ValidationBuilder &$builder)
+        protected function buildValidation(ValidationBuilder $builder)
         {
             //TODO : Redefine in the subclass, if you want to add your check
         }
