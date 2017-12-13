@@ -7,7 +7,7 @@
 	 *   @Author : Alexandre Caillot
 	 *   @WebSite : https://www.shiros.fr
 	 *
-	 *   @File : FloatType.php
+	 *   @File : ValidationType.php
 	 *   @Created_at : 08/12/2017
 	 *   @Update_at : 08/12/2017
 	 * --------------------------------------------------------------------------
@@ -15,16 +15,16 @@
 	
 	namespace ShirOSBundle\Utils\Validation\Type;
 	
-	class FloatType implements ValidationType
+	interface ValidationType
 	{
 		/**
 		 * Retour le Type
 		 */
-		public static function type(): ValidationType { return new FloatType(); }
+		public static function type(): ValidationType;
 		
 		/**
 		 * Permet de verifier si le champ est du type de la classe
 		 */
-		public function validate($field) { return is_float($field); }
+		public function validate($field);
 	}
 ?>
