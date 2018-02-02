@@ -16,7 +16,7 @@
 	use App\Gateway\AppManager;
 	
 	use ShirOSBundle\Utils\Url\Url;
-	use ShirOSBundle\ApplicationService;
+	use ShirOSBundle\ApplicationKernel;
 	use ShirOSBundle\Database\Gateway\Manager;
 	
 	/**
@@ -26,7 +26,7 @@
 	 * Permet d'ajouter des comportements, tels que la gestion des accès aux pages
 	 *
 	 */
-	class App extends ApplicationService
+	class App extends ApplicationKernel
 	{
 		/**
 		 * Contient l'instance de la classe

@@ -30,7 +30,7 @@
 	|
 	*/
 	
-	require ROOT . '/Core/ShirOSBundle/src/ApplicationService.php';
+	require ROOT . '/Core/ShirOSBundle/src/ApplicationKernel.php';
 	require ROOT . '/App/App.php';
 	App::load();
 	
