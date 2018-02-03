@@ -23,22 +23,7 @@
 	
 	class HomeValidation extends Validation
 	{
-		/**
-		 * Instance de la Classe de gestion des Configs
-		 * @var Config
-		 */
-		protected $ConfigModule;
-		
-		/**
-		 * @var string
-		 */
-		protected $emptyMessage = '';
-		
-		public function __construct()
-		{
-			$this->ConfigModule = Config::getInstance();
-			parent::__construct();
-		}
+		protected const ERROR_MESSAGE_EMPTY = '';
 		
 		protected function buildValidation(ValidationBuilder $builder)
 		{

@@ -1,0 +1,87 @@
+/* ---- Contenue des Pages ---- */
+
+
+	/* Classes Particulières */
+
+		#profilBox {
+			display: flex;
+			height: 100%;
+			
+			flex-direction: column;
+			justify-content: center;
+
+			background-color: #363636; /* 474747 */
+			box-shadow: -1px 2px 5px 2px rgba(0,0,0,.3) inset;			
+		}
+
+		#profilBox > a {
+			padding: 5px;
+			text-align: center;
+
+			font-size: 20px;
+ 			color: #FFFFFF;
+		}
+
+		#profilBox > a > span { color: #E67E22; }
+
+		.overflow { overflow: hidden; }
+
+
+		/* -------- REPUBLICRAFT -------- */
+
+
+			/* ---- Download ---- */
+
+
+				/* -- Serveur Republicraft Prez -- */
+
+					.prezServ
+					{	
+						position: relative;
+						z-index: 1;
+
+						height: 300px; 
+						width: 100%;
+
+						box-shadow: 0 2px 2px 0 rgba(0,0,0,.2), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.2); 
+					}
+
+					.prezServ div
+					{
+						height: 100%;
+
+						background-color: #686868;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: center center;
+					}
+
+					.prezServ a
+					{
+						display: block;
+						height: 100%; 
+					}
+
+				/* -- Download -- */
+
+					#downloadTable
+					{
+						width: 90%;
+					}
+
+					#downloadTable th
+					{
+						height: 60px;
+						padding: 5%;
+
+						border-style: solid;
+						border-width: 0px;
+						border-right-width: 2px;
+						border-color: #454545;
+					}
+
+					#downloadTable th:last-child {	border-right-width: 0px; }
+
+	/* END Mes Classes */
+
+/* ---- END Contenue des Pages ---- */

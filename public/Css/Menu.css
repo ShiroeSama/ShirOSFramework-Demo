@@ -1,0 +1,55 @@
+/* ---- Style pour le Header ---- */
+		
+	/* Menu */
+
+		nav
+		{
+			display: flex;
+			height: 100%;
+			width: 100%;
+
+			flex-direction: column;
+			justify-content: center;
+
+			overflow: hidden;
+		}
+
+		.navbar-title
+		{
+			font-size: 40px;
+			color: #FFF;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+
+		.navbar-title:hover
+		{
+			color:#E67E22;
+		}
+
+		.navbar-left
+		{
+			height: 100%;
+			width: 80%;
+			float: left;
+		}
+
+		.navbar-right
+		{
+			height: 100%;
+			width: 20%;
+			float: right;
+		}
+
+		.navbar-button
+		{
+			display: flex;
+			height: 100%;
+
+			flex-direction: column;
+			justify-content: center;
+		}
+		
+	/* END Menu */
+
+/* ---- END Style pour le Header ---- */ 

@@ -4,6 +4,85 @@
 
 		@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 
+		@font-face 
+		{
+			font-family: AbrilFatfaceRegular;
+			src: url("Fonts/AbrilFatface/AbrilFatface-Regular.ttf");
+		}
+
+		@font-face 
+		{
+			font-family: AlmendraRegular;
+			src: url("Fonts/almendra/Almendra-Regular.otf");
+		}
+
+		@font-face 
+		{
+			font-family: CantarellRegular;
+			src: url("Fonts/Cantarell/Cantarell-Regular.ttf");
+		}
+
+		@font-face 
+		{
+			font-family: Com4TFine;
+			src: url("Fonts/Com4TFine/COM4F_RG.TTF");
+		}
+
+		@font-face 
+		{
+			font-family: Dekar;
+			src: url("Fonts/dekar/Dekar.otf");
+		}
+
+		@font-face 
+		{
+			font-family: DekarLight;
+			src: url("Fonts/dekar/Dekar Light.otf");
+		}
+
+		@font-face 
+		{
+			font-family: DrawveticaMini;
+			src: url("Fonts/drawveticamini/DrawveticaMini.ttf");
+		}
+
+		@font-face 
+		{
+			font-family: JosefinSlabRegular;
+			src: url("Fonts/josefin-slab/JosefinSlab-Regular.ttf");
+		}
+
+		@font-face 
+		{
+			font-family: OldStandardTTRegular;
+			src: url("Fonts/OldStandardTT/OldStandard-Regular.ttf");
+		}
+
+		@font-face 
+		{
+			font-family: OswaldRegular;
+			src: url("Fonts/Oswald/Oswald-Light.ttf");
+		}
+		
+		@font-face 
+		{
+			font-family: RokkitRegular;
+			src: url("Fonts/Rokkitt/Rokkitt-ExtraLight.ttf");
+		}
+		
+		@font-face 
+		{
+			font-family: VollkornRegular;
+			src: url("Fonts/Vollkorn/Vollkorn-Regular.ttf");
+		}
+				
+		@font-face
+		{
+			font-family: 'Glyphicons Halflings';
+			src: url('Fonts/Glyphicon/glyphicons-halflings-regular.eot');
+			src: url('Fonts/Glyphicon/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('Fonts/Glyphicon/glyphicons-halflings-regular.woff2') format('woff2'), url('Fonts/Glyphicon/glyphicons-halflings-regular.woff') format('woff'), url('Fonts/Glyphicon/glyphicons-halflings-regular.ttf') format('truetype'), url('Fonts/Glyphicon/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+		}
+
 	/* END Police */
 
 /* ---- END Style pour la forme générale de la page ---- */

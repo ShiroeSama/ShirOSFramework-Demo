@@ -1,0 +1,62 @@
+/* ---- Effets sur les Images ---- */
+	
+	.img
+	{
+		width: 100%;
+	}
+	
+	/* Blur */
+		.img-blur
+		{
+			-webkit-filter: blur(3px);
+			filter: blur(3px);
+			-webkit-transition: .2s ease-in-out;
+			transition: .2s ease-in-out;
+		}
+		.img-blur:hover
+		{
+			-webkit-filter: blur(0);
+			filter: blur(0);
+		}
+
+	/* Gray Scale */
+		.img-grayScale
+		{
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+			-webkit-transition: .2s ease-in-out;
+			transition: .2s ease-in-out;
+		}
+		.img-grayScale:hover
+		{
+			-webkit-filter: grayscale(0);
+			filter: grayscale(0);
+		}
+
+	/* Blur + Gray Scale */
+		.img-grayScaleBlur
+		{
+			-webkit-filter: grayscale(100%) blur(3px);
+			filter: grayscale(100%) blur(3px);
+			-webkit-transition: .2s ease-in-out;
+			transition: .2s ease-in-out;
+		}
+		.img-grayScaleBlur:hover
+		{
+			-webkit-filter: grayscale(0) blur(0);
+			filter: grayscale(0) blur(0);
+		}
+
+	/* Opacity #1 */
+		.img-opacity
+		{
+			opacity: 1;
+			-webkit-transition: .2s ease-in-out;
+			transition: .2s ease-in-out;
+		}
+		.img-opacity:hover
+		{
+			opacity: .5;
+		}
+
+/* ---- END Effets sur les Images ---- */
