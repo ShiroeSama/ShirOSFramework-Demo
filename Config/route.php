@@ -44,20 +44,22 @@
 		|
 		*/
 		
-		'Homepage' => [
-			'Rule'   => '/',
-			'Action' => 'HomeController.index',
-		],
-		
-		'Security' => [
-			'Rule'   => '/security',
-			'Action' => 'Security.SecurityController.secure',
-		],
-		
-		'Logout' => [
-			'Rule'   => '/logout',
-			'Action' => 'Security.SecurityController.logout',
-		],
+		'ROUTES' => [
+			'Homepage' => [
+				'Rule'   => '/',
+				'Action' => 'HomeController.index',
+			],
+			
+			'Security' => [
+				'Rule'   => '/security',
+				'Action' => 'Security.SecurityController.secure',
+			],
+			
+			'Logout' => [
+				'Rule'   => '/logout',
+				'Action' => 'Security.SecurityController.logout',
+			]
+		]
 	
 	
 	/*
