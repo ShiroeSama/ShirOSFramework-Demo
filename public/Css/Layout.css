@@ -1,38 +1,64 @@
-/* ---- Style pour la forme générale de la page ---- */
+/* -------- Variables -------- */
 
-	/* Balise de Structuration */
-		html {
-			height: 100%;
+:root {
+    --main-color-blue: #337ab7;
+    --main-color-orange: #E67E22;
+    --main-color-black: #000000;
+    --main-color-dark: #333333;
+    --main-color-ldark: #525252;
+    --main-color-gray: #808080;
+    --main-color-lgray: #E5E5E5;
+    --main-color-white: #FFFFFF;
 
-            box-sizing: content-box;
-			-ms-text-size-adjust: 100%;
-			-webkit-text-size-adjust: 100%;
-		}
+    --text-color: #1C1C1C;
 
-		body {
-			display: block;
-            box-sizing: content-box;
+    --box-shadow-bg-color: rgba(0,0,0,.2);
+}
 
-			height: 100%;
-			width: 100%;
+/* -------- END Variables -------- */
 
-			margin: 0;
-			padding: 0;
 
-			background-color: #e5e5e5;
+/* -------- Layout -------- */
 
-			font-size: 15px;
-			font-family: Lato, Helvetica Neue, Helvetica,Arial, sans-serif;  /* "AlmendraRegular" , "Helvetica Neue" , "JosefinSlabRegular", "RokkitRegular" */
-			word-wrap: break-word;
+    html {
+        height: 100%;
 
-			overflow: hidden;
-		}
+        box-sizing: content-box;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
 
-		article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary { display:block; }
+    body {
+        display: block;
+        box-sizing: content-box;
 
-	/* END Balise de Structuration */
+        height: 100%;
+        width: 100%;
 
-	/* Scrollbar */
+        margin: 0;
+        padding: 0;
+
+        background-color: var(--main-color-lgray);
+
+        font-size: 15px;
+        font-family: Lato, Helvetica Neue, Helvetica,Arial, sans-serif;  /* "AlmendraRegular" , "Helvetica Neue" , "JosefinSlabRegular", "RokkitRegular" */
+        word-wrap: break-word;
+
+        overflow: hidden;
+    }
+
+    article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
+        display:block;
+
+        -webkit-transform: translateZ(0);
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+
+
+	/* -- Scrollbar -- */
 
         .overflow { overflow: auto !important; }
         .overflowHidden { overflow: hidden !important; }
@@ -40,16 +66,15 @@
 		.scrollVertical { overflow-y: scroll !important; }
 		.scrollHorizontal { overflow-x: scroll !important; }
 
-	/* END Scrollbar */
+	/* -- END Scrollbar -- */
 
-	/* Page */
+
+	/* -- Page -- */
 
         header {
-            height: 10%;
+            height: 8%;
             width: 100%;
-
-            color: #656565;
-            background-color: #404040;
+            box-sizing: content-box;
 
             -webkit-transform: translateZ(0);
             -webkit-transition: all 0.2s ease-out;
@@ -59,13 +84,34 @@
         }
 
 		#Page {
-			height: 90%;
+            display: block;
+			height: 92%;
 			width: 100%;
 			padding: 0% 5%;
 
             box-sizing: border-box;
             overflow-y: auto !important;
+
+            -webkit-transform: translateZ(0);
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
 		}
+
+        #SiteBox {
+            height: 100%;
+            width: 15%;
+            float: left;
+
+            background-color: var(--main-color-ldark) !important;
+        }
+        #SiteBoxButton { display: none; }
+
+        #Mozaic {
+            margin: 100px;
+            text-align: center;
+        }
 
         .container {
             box-sizing: content-box;
@@ -77,43 +123,92 @@
             width: 100%;
         }
 
-		/* -- Block de Text -- */
+        .link {
+            color: var(--main-color-blue);
+            text-decoration: none;
+
+            -webkit-transform: translateZ(0);
+            -webkit-transition: all 0.2s ease-out;
+            -moz-transition: all 0.2s ease-out;
+            -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+        }
+
+        .link:hover { color: var(--main-color-orange); }
 			
-			.post {	margin: 40px 0; }
-			.post-inline { display: inline-block; }
+        .post {
+            box-sizing: content-box;
+            margin: 40px 0;
+            width: 100%;
+        }
+        .post-inline { display: inline-block; }
 
-			.post-header {
-                position: relative;
-                display: block;
-                z-index: 1;
-                width: 100%;
+        .post-header {
+            position: relative;
+            box-sizing: border-box;
+            display: block;
+            z-index: 1;
+            width: 100%;
 
-                line-height: 60px;
-                text-align: center;
+            padding: 10px 20px;
+            text-align: center;
 
-                color: #FFF;
-                font-size: 30px;
-                font-weight: 700;
+            color: var(--main-color-white);
+            font-size: 30px;
+            font-weight: 700;
 
-				background-color: #337ab7;
-			}
+            background-color: var(--main-color-blue);
+        }
 
-			.post-content {
-				position: relative;
-				z-index: 1;
-				clear: both;
-                box-sizing: content-box;
+        .post-content {
+            z-index: 1;
+            clear: both;
 
-				overflow: hidden;
-				
-				padding: 20px 40px;
-				background-color: #FFF;
-				box-shadow: 0 2px 2px 0 rgba(0,0,0,.2), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.2);
-			}
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+
+            overflow: hidden;
+
+            padding: 20px 40px;
+            background-color: var(--main-color-white);
+            box-shadow: 0 2px 2px 0 var(--box-shadow-bg-color), 0 3px 1px -2px var(--box-shadow-bg-color), 0 1px 5px 0 var(--box-shadow-bg-color);
+        }
+
+        .post-image {
+            height: 100%;
+
+            background-color: #686868;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
 		
-	/* END Page */
+	/* -- END Page -- */
 
-	/* Gradient transparent - color - transparent */
+
+    /* -- Color -- */
+
+        .shiros-bg-blue { background-color: var(--main-color-blue) !important; }
+        .shiros-bg-orange { background-color: var(--main-color-orange) !important; }
+        .shiros-bg-dark { background-color: var(--main-color-dark) !important; }
+        .shiros-bg-ldark { background-color: var(--main-color-ldark) !important; }
+        .shiros-bg-gray { background-color: var(--main-color-gray) !important; }
+        .shiros-bg-lgray { background-color: var(--main-color-lgray) !important; }
+        .shiros-bg-white { background-color: var(--main-color-white) !important; }
+
+        .shiros-text-blue { color: var(--main-color-blue) !important; }
+        .shiros-text-orange { color: var(--main-color-orange) !important; }
+        .shiros-text-dark { color: var(--main-color-dark) !important; }
+        .shiros-text-ldark { color: var(--main-color-ldark) !important; }
+        .shiros-text-gray { color: var(--main-color-gray) !important; }
+        .shiros-text-lgray { color: var(--main-color-lgray) !important; }
+        .shiros-text-white { color: var(--main-color-white) !important; }
+
+    /* -- END Color -- */
+
+
+	/* -- HR -- */
 
 		hr {
 			height:0;
@@ -122,55 +217,58 @@
 			box-sizing:content-box
 		}
 
-		.style-orange 
-		{ 
-			border: 1px; 
+		.hr-orange {
+			border: 0;
 			height: 1px;
-			background-image: linear-gradient(to right, rgba(230, 126, 34, 1), rgba(230, 126, 34, 1), rgba(230, 126, 34, 1));
+			background-image: linear-gradient(to right, var(--main-color-orange), var(--main-color-orange), var(--main-color-orange));
 		}
 
-		.style-blue
-		{ 
+		.hr-blue {
 			border: 0; 
 			height: 1px;
-			background-image: linear-gradient(to right, rgba(51, 122, 183, 1), rgba(51, 122, 183, 1), rgba(51, 122, 183, 1));
+			background-image: linear-gradient(to right, var(--main-color-blue), var(--main-color-blue), var(--main-color-blue));
 		}
 
-	/* END Gradient transparent - color - transparent */
+        .hr-2PX { height: 2px; }
+        .hr-4PX { height: 4px; }
+        .hr-6PX { height: 6px; }
+        .hr-8PX { height: 8px; }
+        .hr-10PX { height: 10px; }
+
+    /* -- END HR -- */
 
 
-	/* Texte */
+	/* -- Text -- */
 
         h1, h2, h3 { margin: 0px; }
-
 		h1 { font-size: 30px; }
-
 		h2 { font-size: 25px; }
-
 		h3 { font-size: 20px; }
 
 		p {
-			color: #1c1c1c;
+			color: var(--text-color);
 			font-size: 15px;
 			text-align: justify;
 		}
 
 		a { text-decoration: none; }
 
-	/* END Texte */
+	/* -- END Text -- */
 
-	/* Size Texte */
+
+	/* -- Text Size  -- */
 
 		.text-size-10 { font-size: 10px !important;	}
-        .text-size-12 { font-size: 10px !important;	}
+        .text-size-12 { font-size: 12px !important;	}
 		.text-size-14 { font-size: 14px !important;	}
 		.text-size-15 { font-size: 15px !important;	}
 		.text-size-20 { font-size: 20px !important;	}
 
 
-	/* END Size Texte */
+	/* -- END Text Size -- */
 
-	/* Style Texte */
+
+	/* -- Text Style -- */
 
         .text-bold { font-weight: bold; }
 		.text-italic { font-style: italic; }
@@ -182,6 +280,7 @@
         .text-left { text-align: left }
 		.text-right { text-align: right }
 		.text-center { text-align: center }
+        .text-verticalCenter { vertical-align: middle }
 		
 		.text-nowrap { white-space: nowrap }
 
@@ -189,17 +288,20 @@
 		.text-uppercase { text-transform: uppercase }
 		.text-capitalize { text-transform: capitalize }
 
-	/* END Style Texte */
+	/* -- END Text Style -- */
 
 
-
-	/* Marge */
+	/* -- Margin -- */
 
 		.noMargin { margin: 0px !important; }
-		.noMargin-Top { margin-top: 0px !important; }
-		.noMargin-Right { margin-right: 0px !important; }
-		.noMargin-Bottom { margin-bottom: 0px !important; }
-		.noMargin-Left { margin-left: 0px !important; }
+		.noMargin-top { margin-top: 0px !important; }
+		.noMargin-right { margin-right: 0px !important; }
+		.noMargin-bottom { margin-bottom: 0px !important; }
+		.noMargin-left { margin-left: 0px !important; }
+
+        .margin-auto { margin: auto !important; }
+        .margin-auto-tb { margin: auto 0 !important; }
+        .margin-auto-lr { margin: 0 auto !important; }
 
 		.margin-5 { margin: 5px !important; }
 		.margin-10 { margin: 10px !important; }
@@ -242,9 +344,10 @@
         .marginBottom-80 { margin-bottom: 80px !important; }
         .marginBottom-100 { margin-bottom: 100px !important; }
 
-	/* END Marge */
+	/* -- END Marging -- */
 
-	/* Padding */
+
+	/* -- Padding -- */
 
 		.noPadding { padding: 0px !important; }
 		.noPadding-Top { padding-top: 0px !important; }
@@ -293,18 +396,24 @@
         .paddingBottom-80 { padding-bottom: 80px !important; }
         .paddingBottom-100 { padding-bottom: 100px !important; }
 
-	/* END Padding */
+	/* -- END Padding -- */
 
 
-	/* Div */
+	/* -- Div -- */
 
         .divBloc { display: block !important; }
         .divInline { display: inline-block !important; }
 
 		.div-left { float: left; }
 		.div-right { float: right; }
+        .div-clear { clear: both; }
 
         .divInline-center { text-align: center; }
+        .divInline-verticalCenter {
+            display: flex;
+            height: 100%;
+        }
+
 		.div-center {
 			margin-left: auto !important;
 			margin-right: auto !important;
@@ -317,9 +426,13 @@
 			justify-content: center;
 		}
 
-	/* END Div */
+	/* -- END Div -- */
 
-	/* Div Size */
+
+	/* -- Div Size -- */
+
+        .divWidth-auto { width: auto !important; }
+        .divHeight-auto { height: auto !important; }
 
         .divWidth-5 { width: 5%; }
         .divWidth-10 { width: 10%; }
@@ -331,10 +444,15 @@
         .divWidth-40 { width: 40%; }
         .divWidth-45 { width: 45%; }
         .divWidth-50 { width: 50%; }
+        .divWidth-55 { width: 55%; }
         .divWidth-60 { width: 60%; }
+        .divWidth-65 { width: 65%; }
         .divWidth-70 { width: 70%; }
+        .divWidth-70 { width: 75%; }
         .divWidth-80 { width: 80%; }
+        .divWidth-85 { width: 85%; }
         .divWidth-90 { width: 90%; }
+        .divWidth-95 { width: 95%; }
         .divWidth-100 { width: 100%; }
 
         .divMaxWidth-5 { max-width: 5%; }
@@ -347,10 +465,15 @@
         .divMaxWidth-40 { max-width: 40%; }
         .divMaxWidth-45	{ max-width: 45%; }
         .divMaxWidth-50	{ max-width: 50%; }
-        .divMaxWidth-60	{ max-width: 60%; }
-        .divMaxWidth-70	{ max-width: 70%; }
-        .divMaxWidth-80	{ max-width: 80%; }
-        .divMaxWidth-90	{ max-width: 90%; }
+        .divMaxWidth-55 { max-width: 55%; }
+        .divMaxWidth-60 { max-width: 60%; }
+        .divMaxWidth-65 { max-width: 65%; }
+        .divMaxWidth-70 { max-width: 70%; }
+        .divMaxWidth-75 { max-width: 75%; }
+        .divMaxWidth-80 { max-width: 80%; }
+        .divMaxWidth-85 { max-width: 85%; }
+        .divMaxWidth-90 { max-width: 90%; }
+        .divMaxWidth-95 { max-width: 95%; }
         .divMaxWidth-100 { max-width: 100%; }
 
 		.divLineHeight-10 { line-height: 10px !important; }
@@ -374,10 +497,15 @@
         .divHeight-40 { height: 40%; }
         .divHeight-45 { height: 45%; }
         .divHeight-50 { height: 50%; }
+        .divHeight-55 { height: 55%; }
         .divHeight-60 { height: 60%; }
+        .divHeight-65 { height: 65%; }
         .divHeight-70 { height: 70%; }
+        .divHeight-70 { height: 75%; }
         .divHeight-80 { height: 80%; }
+        .divHeight-85 { height: 85%; }
         .divHeight-90 { height: 90%; }
+        .divHeight-95 { height: 95%; }
         .divHeight-100 { height: 100%; }
 
         .divMaxHeight-5 { max-height: 5%; }
@@ -390,10 +518,15 @@
         .divMaxHeight-40 { max-height: 40%; }
         .divMaxHeight-45 { max-height: 45%; }
         .divMaxHeight-50 { max-height: 50%; }
+        .divMaxHeight-55 { max-height: 55%; }
         .divMaxHeight-60 { max-height: 60%; }
+        .divMaxHeight-65 { max-height: 65%; }
         .divMaxHeight-70 { max-height: 70%; }
+        .divMaxHeight-70 { max-height: 75%; }
         .divMaxHeight-80 { max-height: 80%; }
+        .divMaxHeight-85 { max-height: 85%; }
         .divMaxHeight-90 { max-height: 90%; }
+        .divMaxHeight-95 { max-height: 95%; }
         .divMaxHeight-100 { max-height: 100%; }
 
         .divHeight-200PX { height: 200px; }
@@ -406,9 +539,9 @@
         .divMaxHeight-600PX { max-height: 600px; }
         .divMaxHeight-800PX { max-height: 800px; }
 
-	/* END Div Size */
+	/* -- END Div Size --  */
 
-	/* Liste */
+	/* -- List -- */
 
         table {
             height: 100%;
@@ -424,7 +557,7 @@
             width: calc(100% - 0.9em);
 
             font-weight: normal;
-            border-bottom: solid 1px #337AB7;
+            border-bottom: solid 1px var(--main-color-blue);
         }
 
         tbody {
@@ -440,7 +573,7 @@
 
         tbody tr {
             width: 100%;
-            border-bottom: solid 1px #E67E22;
+            border-bottom: solid 1px var(--main-color-orange);
 
             -webkit-transform: translateZ(0);
             -webkit-transition: all 0.2s ease-out;
@@ -449,7 +582,7 @@
             transition: all 0.2s ease-out;
         }
 
-        tbody tr:hover { background-color: #EAEAEA; }
+        tbody tr:hover { background-color: var(--main-color-lgray); }
         tbody td:first-child { text-align: left !important; }
         tbody td:last-child { text-align: end; }
 
@@ -461,6 +594,126 @@
             font-weight: normal;
         }
 
-	/* END Liste */
+	/* -- END List -- */
 
-/* ---- END Style pour la forme générale de la page ---- */
+/* -------- END Layout -------- */
+
+
+
+/* -------- Mobile Layout -------- */
+
+    /* SCREEN WIDTH 1200 PX */
+    @media screen and (max-width: 1200px) {
+        /* -- Page -- */
+
+            body { overflow: auto !important; }
+
+            header {
+                position: relative !important;
+                height: auto !important;
+            }
+
+            #Page {
+                position: relative !important;
+                height: auto !important;
+                padding: 0% !important;
+            }
+
+            #SiteBox {
+                display: none;
+                width: 100%;
+                float: none !important;
+                clear: both !important;
+
+                background-color: var(--main-color-ldark) !important;
+            }
+            #SiteBox.responsive {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+
+            #SiteBoxButton {
+                display: block;
+
+                position: fixed;
+                right: 20px;
+                bottom: 20px;
+                z-index: 10;
+            }
+
+            #Mozaic {
+                margin: 0;
+                margin-top: 100px;
+                width: 100%;
+            }
+
+        /* -- END Page -- */
+
+
+        /* -- Scrollbar -- */
+
+            .scrollVertical { overflow: auto !important; }
+            .scrollHorizontal { overflow: auto !important; }
+
+        /* -- END Scrollbar -- */
+
+
+        /* -- Div -- */
+
+            .divBloc { display: block !important; }
+            .divInline { display: block !important; }
+
+            .div-left { float: none !important; clear: both !important; }
+            .div-right { float: none !important; clear: both !important; }
+
+        /* -- END Div -- */
+
+
+        /* -- Div Size -- */
+
+            .divWidth-5,
+            .divWidth-10,
+            .divWidth-15,
+            .divWidth-20,
+            .divWidth-25,
+            .divWidth-30,
+            .divWidth-35,
+            .divWidth-40,
+            .divWidth-45,
+            .divWidth-50,
+            .divWidth-55,
+            .divWidth-60,
+            .divWidth-65,
+            .divWidth-70,
+            .divWidth-75,
+            .divWidth-80,
+            .divWidth-85,
+            .divWidth-90,
+            .divWidth-95,
+            .divWidth-100,
+            .divMaxWidth-5,
+            .divMaxWidth-10,
+            .divMaxWidth-15,
+            .divMaxWidth-20,
+            .divMaxWidth-25,
+            .divMaxWidth-30,
+            .divMaxWidth-35,
+            .divMaxWidth-40,
+            .divMaxWidth-45,
+            .divMaxWidth-50,
+            .divMaxWidth-55,
+            .divMaxWidth-60,
+            .divMaxWidth-65,
+            .divMaxWidth-70,
+            .divMaxWidth-75,
+            .divMaxWidth-80,
+            .divMaxWidth-85,
+            .divMaxWidth-90,
+            .divMaxWidth-95,
+            .divMaxWidth-100 { width: 100%; }
+
+        /* -- END Div Size --  */
+    }
+
+/* -------- END Layout Mobile -------- */

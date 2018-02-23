@@ -1,55 +1,102 @@
-/* ---- Style pour le Header ---- */
-		
-	/* Menu */
+/* -------- Menu -------- */
 
-		nav
-		{
-			display: flex;
-			height: 100%;
-			width: 100%;
+    #Menu {
+        display: flex;
+        height: 100%;
+        background-color: #333;
+    }
 
-			flex-direction: column;
-			justify-content: center;
+	nav
+	{
+        width: 100%;
+        margin: auto;
 
-			overflow: hidden;
+        overflow: hidden;
+        background-color: #333;
+	}
+
+    nav a:first-child { margin-left: 20px; }
+
+    nav .navButton {
+        float: right !important;
+        padding: 15px 20px !important;
+        margin-right: 20px;
+    }
+
+    nav a {
+        display: block;
+        float: left;
+
+        padding: 15px 20px;
+
+        color: #f2f2f2;
+        font-size: 22px;
+        text-align: center;
+
+        -webkit-transform: translateZ(0);
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+
+    nav a:hover {
+        color: #337AB7;
+        background-color: #fff;
+    }
+
+    nav #IconMenu {
+        display: none;
+        background-color: #333;
+    }
+
+    .active {
+        background-color: #E67E22;
+        color: white;
+    }
+
+/* -------- END Menu -------- */
+
+
+/* -------- Mobile Layout -------- */
+
+    /* SCREEN WIDTH 1200 PX */
+	@media screen and (max-width: 1200px) {
+        #Menu { display: block; }
+        nav { display: block; position: relative; }
+
+        nav a:not(:first-child) {display: none;}
+		nav a#IconMenu {
+			display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            float: right;
+            background-color: transparent;
 		}
 
-		.navbar-title
-		{
-			font-size: 40px;
-			color: #FFF;
-			text-decoration: none;
-			white-space: nowrap;
-		}
+        nav a:first-child { margin-left: 0px !important; }
 
-		.navbar-title:hover
-		{
-			color:#E67E22;
-		}
+        nav .navButton {
+            float: none !important;
+            margin-right: 0px !important;
+        }
 
-		.navbar-left
-		{
-			height: 100%;
-			width: 80%;
-			float: left;
-		}
+        nav.responsive {
+            height: 100%;
+            overflow-y: scroll;
+        }
 
-		.navbar-right
-		{
-			height: 100%;
-			width: 20%;
-			float: right;
-		}
+        nav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
 
-		.navbar-button
-		{
-			display: flex;
-			height: 100%;
+            margin: 0;
+        }
 
-			flex-direction: column;
-			justify-content: center;
-		}
-		
-	/* END Menu */
+        .headerHeight { height: 100% !important; }
+	}
 
-/* ---- END Style pour le Header ---- */ 
+/* -------- END Mobile Layout -------- */

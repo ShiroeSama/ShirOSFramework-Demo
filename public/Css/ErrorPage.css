@@ -1,44 +1,31 @@
 /* ---- Style des Pages d'Erreurs ---- */
 
-	.error-block
-	{
-		font-family: "Francois One";
-	}
+	.error-block { font-family: "Francois One"; }
 
-	.error-catch
-	{
-		margin: 0;
+    .error-catch,
+    .error-info,
+    .error {
+        margin: 0;
+
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        text-shadow: rgb(224, 224, 224) 1px 1px 0px;
+    }
+
+	.error-catch {
 		font-size: 50px;
-
 		color: rgb(97, 97, 97);
-		font-weight: bold;
-		font-style: italic;
-		text-align: center;
-		text-shadow: rgb(224, 224, 224) 1px 1px 0px;
 	}
 
-	.error-info
-	{
-		margin: 0;
+	.error-info {
 		font-size: 20px;
-
 		color: rgb(97, 97, 97);
-		font-weight: bold;
-		font-style: italic;
-		text-align: center;
-		text-shadow: rgb(224, 224, 224) 1px 1px 0px;
 	}
 
-	.error
-	{
-		margin: 0;
+	.error {
 		font-size: 14px;
-
 		color: rgb(120, 46, 46);
-		font-weight: bold;
-		font-style: italic;
-		text-align: center;
-		text-shadow: rgb(224, 224, 224) 1px 1px 0px;
 	}
 
 /* ---- END Style des Pages d'Erreurs ---- */
